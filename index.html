@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job's Board</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/img/favicon-32x32.png">
 
 
 </head>
@@ -12,18 +13,51 @@
 
 
     <header>
-        <div>
-            LOGO
+
+        <div class="logo">
+            <img src="./img/logo.svg" alt="#" width="115px" height="32px">
         </div>
 
-        <div>
-            <img src="./assets/icon-sun.svg" alt="#">
-             <div class="toggle">
-                
-             </div>
-             <img src="./assets/icon-moon.svg" alt="#">
+
+
+        <div class="toggle-menu">
+
+            <img src="./img/icon-sun.svg" alt="#" width="20px" height="18.6px">
+
+            <div class="toggle">toggle</div>
+
+            <img src="./img/icon-moon.svg" alt="#" width="12px" height="12px">
+
         </div>
 
     </header>
+
+
+    <main>
+
+        <form action="GET" class="research-form">
+
+            
+
+            <label for="title-search"></label>
+            <input type="search" id="title-search" placeholder="Filter by title..." class="title-search">
+            <img src="./img/icon-search.svg" alt="#" width="25px" height="25px" class="search-hidden">
+            <img src="./img/icon-filter.svg" alt="#" width="25px" height="25px">
+
+
+            <label for="location-search"></label>
+            <input type="search" id="location-search" placeholder="Filter by location..." class="full-time-location"> 
+
+
+            <label for="full-time-search"></label>
+            <input type="checkbox" id="full-time-search" class="full-time-search">
+
+
+            <button type="submit"><img src="./img/icon-search.svg" alt="#" width="30px" height="30px" id="submit-form"></button>
+
+        </form>
+
+
+    </main>
 </body>
 </html>

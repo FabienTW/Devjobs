@@ -1,20 +1,25 @@
-:root {
 
-    /* Colors: */
-    --dark-grey: #6E8098;
-    --grey: #9DAEC2;
-    --light-grey: #F4F6F8;
-    --white: #FFFFFF;
-    --midnight: #121721;
-    --very-dark-blue: #19202D;
-    --light-violet: #939BF4;
-    --violet: #5964E0;
-}
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use 'abstracts/functions' as *;
 
+@import
+	'base/reset',
+	'base/helpers',
+	'base/typography',
+    'layout/header',
+    'layout/main'
+    ;
 
-// ************ HEADER ************ 
-
-.header { 
-    background-image: url(../assets/bg-pattern-header.svg);
-}
-
+    :root {
+        /* Colors: */
+        --dark-grey: #6E8098;
+        --grey: #9DAEC2;
+        --light-grey: #F4F6F8;
+        --white: #FFFFFF;
+        --midnight: #121721;
+        --very-dark-blue: #19202D;
+        --light-violet: #939BF4;
+        --violet: #5964E0;
+    }
+    

@@ -1,3 +1,215 @@
+@charset "UTF-8";
+h1 {
+  font-size: size(40);
+}
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove focus for mouse users */
+/* TODO : améliorer pour les éléments de formulaire */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin */
+:is(body, h1, h2, h3, h4, p, figure, blockquote, dl, dd) {
+  margin: 0;
+}
+
+/* 2023-01-18 : Modified for CEFIM
+Remove list styles, margin and padding on ul, ol elements with a class, which suggests default styling will be removed */
+:is(ul, ol):where([class]) {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+:is(h1, h2, h3, h4, button, input, label) {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+:is(h1, h2, h3, h4) {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Anything that has been anchored to should scroll and have extra scroll margin */
+:has(:target) {
+  scroll-behavior: smooth;
+  scroll-margin-block: 2.5em;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* CSS Debugger */
+* {
+  /* outline: 1px solid red; */
+}
+
+img:not([alt]) {
+  border: 10px solid red !important;
+}
+
+/* Set cursor pointer */
+label[for],
+button,
+input[type=submit],
+select {
+  cursor: pointer;
+}
+
+/* Remove font style on address */
+address {
+  font-style: normal;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+/* Print external URLs */
+@media print {
+  a[href]:not([href^="#"])::after {
+    content: "(" attr(href) ")";
+  }
+}
+/* kumbh-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/kumbh-sans-v22-latin-regular.woff2") format("woff2");
+}
+/* kumbh-sans-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/kumbh-sans-v22-latin-700.woff2") format("woff2");
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background-image: url(../../img/background-pattern-header.svg);
+  background-repeat: no-repeat;
+  height: 8.5rem;
+  background-position: left -45px top 0;
+}
+header .logo {
+  padding-left: 1.5rem;
+  align-items: center;
+}
+header .toggle-menu {
+  padding-right: 1.5rem;
+}
+header .toggle-menu .toggle {
+  background-color: white;
+  border-radius: 12px;
+}
+header div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#location-search {
+  background-image: url(../../img/icon-location.svg);
+  background-repeat: no-repeat;
+  text-indent: 20px;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-family: "Kumbh Sans";
+  font-weight: bold;
+}
+
+body {
+  font-family: "Kumbh Sans";
+}
+
+.research-form {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin-top: -30px;
+  border-radius: 6px;
+}
+
+.search-hidden {
+  display: none;
+}
+
+.full-time-search {
+  display: none;
+}
+
+.full-time-location {
+  display: none;
+}
+
+.title-search {
+  border: none;
+  text-indent: 20px;
+}
+
 :root {
   /* Colors: */
   --dark-grey: #6E8098;
@@ -8,11 +220,6 @@
   --very-dark-blue: #19202D;
   --light-violet: #939BF4;
   --violet: #5964E0;
-}
-
-header {
-  background-image: url(../assets/bg-pattern-header.svg);
-  height: 10rem;
 }
 
 /*# sourceMappingURL=style.css.map */

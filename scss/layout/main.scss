@@ -1,0 +1,31 @@
+
+body {
+    font-family: 'Kumbh Sans';
+}
+
+
+.research-form { 
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: -30px;
+    border-radius: 6px;
+}
+
+.search-hidden {
+    display: none;
+}
+
+.full-time-search {
+   display: none;
+}
+
+.full-time-location {
+    display: none;
+}
+
+.title-search {
+    border: none;
+    text-indent: 20px;
+}
+

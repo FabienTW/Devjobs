@@ -1,0 +1,46 @@
+
+// ************ HEADER ************ 
+header { 
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../../img/background-pattern-header.svg);
+    background-repeat: no-repeat;
+    height: 8.5rem;
+    background-position: left -45px top 0;
+    
+    .logo {
+        padding-left: 1.5rem;
+        align-items: center;
+    }
+
+    .toggle-menu {
+        .toggle {
+            background-color: white;
+            border-radius: 12px;
+        }
+        padding-right: 1.5rem;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+#location-search {
+    background-image: url(../../img/icon-location.svg);
+    background-repeat: no-repeat;
+    text-indent: 20px;
+}
+
+:is(h1,h2,h3,h4,h5,h6) {
+    font-family: 'Kumbh Sans';
+    font-weight: bold;
+}
+
+
+
+
+
+
