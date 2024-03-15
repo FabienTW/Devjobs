@@ -4,28 +4,8 @@ body {
 }
 
 
-.research-form { 
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    margin-top: -30px;
-    border-radius: 6px;
-}
+.container { 
+    padding-inline: clamp(1.5rem, -1.603rem + 13.239vw, 10.313rem);
 
-.search-hidden {
-    display: none;
-}
-
-.full-time-search {
-   display: none;
-}
-
-.full-time-location {
-    display: none;
-}
-
-.title-search {
-    border: none;
-    text-indent: 20px;
 }
 

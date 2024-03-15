@@ -7,18 +7,29 @@ header {
     background-repeat: no-repeat;
     height: 8.5rem;
     background-position: left -45px top 0;
+    object-fit: cover;
     
     .logo {
-        padding-left: 1.5rem;
+        margin-bottom: 4.5rem;
+        margin-top: 2rem;
+        margin-left: 1.5rem;
         align-items: center;
+        color: $white;
+        h1 {
+            font-size: 1.75rem;
+            line-height: 2.125rem;
+        }
+       
     }
 
     .toggle-menu {
+        margin-top: 2.25rem;
+        margin-right: 1.5rem;
+        margin-bottom: 4.75rem;
         .toggle {
             background-color: white;
             border-radius: 12px;
         }
-        padding-right: 1.5rem;
     }
 
     div {
@@ -29,8 +40,6 @@ header {
 }
 
 #location-search {
-    background-image: url(../../img/icon-location.svg);
-    background-repeat: no-repeat;
     text-indent: 20px;
 }
 
