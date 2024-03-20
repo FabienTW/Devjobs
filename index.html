@@ -104,40 +104,52 @@
       </div>
 
       <section class="jobs">
-        <div class="container">
 
 
+        <div id="loading-indicator">
+          Chargement en cours...
+      </div>
+        
 
-          <div class="template">
-            <div class="jobs-card">
-              <div class="jobs-logo">Logo</div>
-              <div class="jobs-infos">
-                <p class="jobs-posted-time">5h ago</p>
-                <span class="jobs-median">&#183;</span>
-                <p class="jobs-type">Full Time</p>
-              </div>
-              <h2 class="jobs-title">Senior Software Engineer</h2>
-              <p class="jobs-description">Lorem Ipsum</p>
-              <p class="jobs-location">France</p>
-  
-
-
-
+      <template id="job-card-template">
+        <div class="jobs-card">
+          <img class="jobs-logo" src="" alt="Logo de l'entreprise" width="50px" height="50px">
+          <div class="jobs-infos">
+            <p class="jobs-posted-time"></p>
+            <span class="jobs-median">&#183;</span>
+            <p class="jobs-type"></p>
           </div>
-          
+          <h3 class="jobs-title"></h3>
+          <p class="jobs-company"></p>
+          <p class="jobs-location"></p> 
+        </div>  
+      </template>
+      
 
 
-
-
-
-
-          </div>
+        <div class="container" id="job-cards-container">
         </div>
+        </div>
+
+        <div class="btn-content">
+          <button class="btn-loadmore">Load More</button>
+
+
+        </div>
+
+      
+
+
+
       </section>
 
     </main>
 
-    <script src="./script.js"></script>
+    <script src="./js/tools.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/getApi.js"></script>
+    <script src="./js/template.js"></script>
+
     
   </body>
 </html>

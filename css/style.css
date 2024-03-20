@@ -187,12 +187,33 @@ header div {
 }
 
 body {
-  background-color: #F4F6F8;
   font-family: "Kumbh Sans";
 }
 
 .container {
   padding-inline: clamp(1.5rem, -1.603rem + 13.239vw, 10.313rem);
+}
+
+main {
+  background-color: #F4F6F8;
+}
+
+.btn-content {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-loadmore {
+  margin-block-start: 2rem;
+  margin-block-end: 4rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-radius: 5px;
+  border: none;
+  background-color: #5964E0;
+  padding-inline: 1.875rem;
+  padding-block: 1rem;
 }
 
 .research-form {
@@ -400,23 +421,38 @@ body {
 }
 
 .jobs-logo {
+  padding-block: 0.75rem;
+  padding-inline: 0.25rem;
   transform: translateY(-50%);
   margin-left: 2rem;
   grid-area: logo;
+  border-radius: 15px;
 }
 
 .jobs-infos {
-  margin-top: 3.125rem;
+  color: #6E8098;
   margin-left: 2rem;
   grid-area: infos;
   display: flex;
 }
 
+.jobs-company {
+  margin-block-end: 2.5rem;
+  margin-left: 2rem;
+  color: #6E8098;
+}
+
 .jobs-median {
-  padding-inline: 0.75rem;
+  font-size: 50px;
+  margin-inline: 0.75rem;
+  line-height: 16px;
+  color: #6E8098;
 }
 
 .jobs-title {
+  font-size: 1.25rem;
+  color: #19202D;
+  font-weight: bold;
   margin-block: 0.75rem;
   margin-left: 2rem;
   grid-area: titre;
@@ -429,9 +465,20 @@ body {
 }
 
 .jobs-location {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #5964E0;
   margin-block-end: 2rem;
   margin-left: 2rem;
   grid-area: location;
+}
+
+.template {
+  display: none;
+}
+
+#loading-indicator {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,5 @@
 
 body {
-    background-color: $light-grey;
     font-family: 'Kumbh Sans';
 }
 .container { 
@@ -8,4 +7,25 @@ body {
 
 }
 
+main {
+    background-color: $light-grey;
+}
 
+.btn-content {
+    display: flex;
+    justify-content: center;
+}
+
+
+.btn-loadmore {
+    margin-block-start: 2rem;
+    margin-block-end: 4rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    color: $white;
+    border-radius: 5px;
+    border: none;
+    background-color: $violet;
+    padding-inline: 1.875rem;
+    padding-block: 1rem;
+}

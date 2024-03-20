@@ -1,10 +1,4 @@
 
-
-.template {
-    display: none;
-}
-
-
 .jobs-card {
     background-color: $white;
     border-radius: 6px;
@@ -19,22 +13,39 @@
 }
 
 .jobs-logo {
+    padding-block: .75rem;
+    padding-inline: 0.25rem;
     transform: translateY(-50%);
     margin-left: 2rem;
     grid-area: logo;
+    border-radius: 15px;
 }
 
 .jobs-infos {
-    margin-top: 3.125rem;
+    color: $dark-grey;
     margin-left: 2rem;
     grid-area: infos;
     display: flex;
 }
 
+.jobs-company {
+    margin-block-end: 2.5rem;
+    margin-left: 2rem;
+    color: $dark-grey;
+
+}
+
 .jobs-median {
-    padding-inline: .75rem;
+    font-size: 50px;
+    margin-inline: .75rem;
+    line-height: 16px;
+    color: $dark-grey;
 }
 .jobs-title {
+    font-size: 1.25rem;
+    color: $very-dark-blue;
+
+    font-weight: bold;
     margin-block: .75rem;
     margin-left: 2rem;
     grid-area: titre;
@@ -48,10 +59,21 @@
 }
 
 .jobs-location {
+    font-size: .875rem;
+    font-weight: bold ;
+    color: $violet;
     margin-block-end: 2rem;
     margin-left: 2rem;
     grid-area: location;
 }
 
 
+.template {
+    display: none;
+}
+
+
+#loading-indicator {
+    display: none;
+}
 
