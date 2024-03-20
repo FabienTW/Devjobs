@@ -13,11 +13,11 @@
 }
 
 .form-input {
+    transform: translateY(-50%);
     width: 100%;
     margin-inline: auto;
     justify-content: space-between;
     height: 5rem;
-    margin-block: -3rem;    
     display: flex;
     padding: 1rem;
     background-color: white;
@@ -26,8 +26,6 @@
     overflow: hidden;
 
 }
-
-
 .btn-search {
     min-width: 3rem;
     margin: 1rem;
@@ -44,75 +42,6 @@
    }
 
 
-/***************** Modal *****************/
-
-
-
-.modal {
-
-    border-radius: 6px;
-    margin: auto;
-    width: 87%;
-    display: none;
-    position: fixed; 
-    z-index: 1; 
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    background-color: $white; 
-    .full-time-location{
-        border: none;
-        width: 100%;
-    }
-}
-
-.location-content {
-    display: flex;
-    border-bottom: 1px solid $grey
-}
-
-.location {
-    margin: 1.5rem;
-    margin-right: 1rem;
-}
-
-.input-location {
-    border: none;    
-}
-
-.full-time-search {
-    width: 1.5rem;
-    height: 1.5rem;
-}
-
-
-.search-button {
-    border: none;
-    font-size: 1rem;
-    font-weight: bold;
-    color: $white;
-    width: 87%;
-    padding: 1rem;
-}
-.full-time-search {
-    opacity: 0;
-}
-
-.fts-input {
-    display: flex;
-    align-items: center;
-    margin: 1.5rem;
-}
-
-
-.fts-content {
-    font-size: 1rem;
-    margin-left: 1rem;
-    font-weight: bold;
-
-}
-
-.search-hidden {
-    display: none;
-    overflow: hidden;
-}
+   .img-filter {
+    cursor: pointer
+   }

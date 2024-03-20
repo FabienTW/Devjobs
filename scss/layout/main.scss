@@ -1,11 +1,11 @@
 
 body {
+    background-color: $light-grey;
     font-family: 'Kumbh Sans';
 }
-
-
 .container { 
     padding-inline: clamp(1.5rem, -1.603rem + 13.239vw, 10.313rem);
 
 }
+
 

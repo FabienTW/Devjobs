@@ -94,7 +94,7 @@ select {
 }
 /* CSS Debugger */
 * {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 img:not([alt]) {
@@ -181,16 +181,13 @@ header div {
   gap: 1rem;
 }
 
-#location-search {
-  text-indent: 20px;
-}
-
 :is(h1, h2, h3, h4, h5, h6) {
   font-family: "Kumbh Sans";
   font-weight: bold;
 }
 
 body {
+  background-color: #F4F6F8;
   font-family: "Kumbh Sans";
 }
 
@@ -212,11 +209,11 @@ body {
 }
 
 .form-input {
+  transform: translateY(-50%);
   width: 100%;
   margin-inline: auto;
   justify-content: space-between;
   height: 5rem;
-  margin-block: -3rem;
   display: flex;
   padding: 1rem;
   background-color: white;
@@ -239,71 +236,8 @@ body {
   margin: 24px;
 }
 
-/***************** Modal *****************/
-.modal {
-  border-radius: 6px;
-  margin: auto;
-  width: 87%;
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #FFFFFF;
-}
-.modal .full-time-location {
-  border: none;
-  width: 100%;
-}
-
-.location-content {
-  display: flex;
-  border-bottom: 1px solid #9DAEC2;
-}
-
-.location {
-  margin: 1.5rem;
-  margin-right: 1rem;
-}
-
-.input-location {
-  border: none;
-}
-
-.full-time-search {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.search-button {
-  border: none;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #FFFFFF;
-  width: 87%;
-  padding: 1rem;
-}
-
-.full-time-search {
-  opacity: 0;
-}
-
-.fts-input {
-  display: flex;
-  align-items: center;
-  margin: 1.5rem;
-}
-
-.fts-content {
-  font-size: 1rem;
-  margin-left: 1rem;
-  font-weight: bold;
-}
-
-.search-hidden {
-  display: none;
-  overflow: hidden;
+.img-filter {
+  cursor: pointer;
 }
 
 .cbx {
@@ -381,6 +315,123 @@ body {
 }
 .hidden-xs-up {
   display: none !important;
+}
+
+.modal-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal {
+  position: absolute;
+  border-radius: 6px;
+  margin: auto;
+  width: 87%;
+  position: fixed;
+  z-index: 101;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+}
+.modal .full-time-location {
+  border: none;
+  width: 100%;
+}
+
+.location-content {
+  display: flex;
+  border-bottom: 1px solid #9DAEC2;
+}
+
+.location {
+  margin: 1.5rem;
+  margin-right: 1rem;
+}
+
+.input-location {
+  border: none;
+}
+
+.full-time-search {
+  opacity: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.search-button {
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  width: 87%;
+  padding: 1rem;
+}
+
+.fts-input {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem;
+}
+
+.fts-content {
+  font-size: 1rem;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.search-hidden {
+  display: none;
+  overflow: hidden;
+}
+
+.jobs-card {
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  display: grid;
+  grid-template-areas: "logo" "infos" "titre" " description" "location ";
+  margin-top: 4.5rem;
+}
+
+.jobs-logo {
+  transform: translateY(-50%);
+  margin-left: 2rem;
+  grid-area: logo;
+}
+
+.jobs-infos {
+  margin-top: 3.125rem;
+  margin-left: 2rem;
+  grid-area: infos;
+  display: flex;
+}
+
+.jobs-median {
+  padding-inline: 0.75rem;
+}
+
+.jobs-title {
+  margin-block: 0.75rem;
+  margin-left: 2rem;
+  grid-area: titre;
+}
+
+.jobs-description {
+  margin-left: 2rem;
+  margin-block-end: 2.5rem;
+  grid-area: description;
+}
+
+.jobs-location {
+  margin-block-end: 2rem;
+  margin-left: 2rem;
+  grid-area: location;
 }
 
 /*# sourceMappingURL=style.css.map */

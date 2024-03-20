@@ -1,0 +1,57 @@
+
+
+.template {
+    display: none;
+}
+
+
+.jobs-card {
+    background-color: $white;
+    border-radius: 6px;
+    display: grid;
+    grid-template-areas: 
+    "logo"
+    "infos"
+    "titre"
+    " description"
+    "location ";
+    margin-top: 4.5rem
+}
+
+.jobs-logo {
+    transform: translateY(-50%);
+    margin-left: 2rem;
+    grid-area: logo;
+}
+
+.jobs-infos {
+    margin-top: 3.125rem;
+    margin-left: 2rem;
+    grid-area: infos;
+    display: flex;
+}
+
+.jobs-median {
+    padding-inline: .75rem;
+}
+.jobs-title {
+    margin-block: .75rem;
+    margin-left: 2rem;
+    grid-area: titre;
+}
+
+.jobs-description {
+    margin-left: 2rem;
+    margin-block-end: 2.5rem;
+
+    grid-area: description;
+}
+
+.jobs-location {
+    margin-block-end: 2rem;
+    margin-left: 2rem;
+    grid-area: location;
+}
+
+
+
