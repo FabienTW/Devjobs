@@ -153,7 +153,6 @@ header {
   background-repeat: no-repeat;
   height: 8.5rem;
   background-position: left -45px top 0;
-  object-fit: cover;
 }
 header .logo {
   margin-bottom: 4.5rem;
@@ -251,9 +250,10 @@ header div {
 @media screen and (min-width: 48em) {
   header {
     background-position: 0 0;
-    background-color: #5964E0;
+    background-size: cover;
   }
 }
+/* Copyright Damien Buisson */
 body {
   font-family: "Kumbh Sans";
 }
@@ -282,6 +282,10 @@ main {
   background-color: #5964E0;
   padding-inline: 1.875rem;
   padding-block: 1rem;
+}
+
+body {
+  background-color: #F4F6F8;
 }
 
 .research-form {
@@ -614,6 +618,114 @@ main {
 
 .jobs-title-darkmode {
   color: #FFFFFF;
+}
+
+.jobs-description-card {
+  width: 100%;
+  display: flex;
+  transform: translateY(-20%);
+  background-color: #FFFFFF;
+  justify-content: space-between;
+  border-radius: 6px;
+  max-height: 8.75rem;
+}
+
+.description-container {
+  background-color: #FFFFFF;
+  padding: 3rem;
+}
+
+.jobsinfos-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-company {
+  border: none;
+  color: #5964E0;
+  font-weight: bold;
+  padding-inline: 1.25rem;
+  padding-block: 1rem;
+  background-color: #F4F6F8;
+  border-radius: 6px;
+  align-items: center;
+  margin: 2.875rem;
+}
+
+.jobsinfos-company {
+  margin-inline-start: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.jobsinfos-company .name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.jobsinfos-company .link {
+  color: #6E8098;
+}
+
+.jobs-description-infos {
+  display: flex;
+  color: #6E8098;
+}
+
+.jobs-description-title {
+  font-size: 1.25rem;
+  color: #19202D;
+  font-weight: bold;
+  margin-block: 0.75rem;
+}
+
+.titleinfos-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-apply {
+  max-height: 3rem;
+  font-weight: bold;
+  border: none;
+  color: #FFFFFF;
+  background-color: #5964E0;
+  border-radius: 0.375rem;
+  padding-block: 1rem;
+  padding-inline: 1.75rem;
+  align-items: center;
+}
+
+.jobs-description-location {
+  color: #5964E0;
+  font-size: 0.875rem;
+  margin-block-start: 0.5rem;
+  margin-block-end: 2.5rem;
+}
+
+.jobs-description-requirements {
+  color: #6E8098;
+  margin-block-end: 2.5rem;
+}
+
+.list-requirement {
+  color: #6E8098;
+}
+
+.list-requirement::marker {
+  color: #5964E0;
+}
+
+.list-do {
+  color: #6E8098;
+}
+
+.list-do::marker {
+  color: #5964E0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,108 @@
+.jobs-description-card {
+    width: 100%;
+    display: flex;
+    transform: translateY(-20%);
+    background-color: $white;
+    justify-content: space-between;
+    border-radius: 6px;
+    max-height: 8.75rem;
+}
+
+.description-container {
+    background-color: $white;
+    padding: 3rem;
+}
+.jobsinfos-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-company {
+    border: none;
+    color: $violet;
+    font-weight: bold;
+    padding-inline: 1.25rem;
+    padding-block: 1rem;
+    background-color: $light-grey;
+    border-radius: 6px;
+    align-items: center;
+    margin: 2.875rem;
+}
+
+
+.jobsinfos-company {
+margin-inline-start: 2.5rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.jobsinfos-company .name {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.jobsinfos-company .link {
+    color: $dark-grey;
+}
+
+
+.jobs-description-infos {
+    display: flex;
+    color: $dark-grey;
+}
+.jobs-description-title {
+    font-size: 1.25rem;
+    color: $very-dark-blue;
+    font-weight: bold;
+    margin-block: .75rem;
+}
+
+.titleinfos-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-apply {
+    max-height: 3rem;
+    font-weight: bold;
+    border: none;
+    color: $white;
+    background-color: $violet;
+    border-radius: .375rem;
+    padding-block: 1rem;
+    padding-inline: 1.75rem;
+    align-items: center;
+}
+
+.jobs-description-location {
+    color: $violet;
+    font-size: .875rem;
+    margin-block-start: .5rem;
+    margin-block-end: 2.5rem;
+}
+
+.jobs-description-requirements {
+    color: $dark-grey;
+    margin-block-end: 2.5rem;
+}
+
+.list-requirement {
+    color: $dark-grey;
+}
+
+
+.list-requirement::marker{
+    color: $violet;
+}
+
+.list-do {
+    color: $dark-grey;
+}
+
+.list-do::marker{
+    color: $violet;
+}

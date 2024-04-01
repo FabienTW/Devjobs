@@ -7,7 +7,6 @@ header {
     background-repeat: no-repeat;
     height: 8.5rem;
     background-position: left -45px top 0;
-    object-fit: cover;
     
     .logo {
         margin-bottom: 4.5rem;
@@ -106,6 +105,15 @@ header {
 @include mq ('md') {
     header {
 background-position: 0 0;
-background-color: $violet
+background-size: cover;
     }
+}
+
+
+@include mq ('mq') {
+    .filter-container {
+        display: block;
+    }
+
+
 }
