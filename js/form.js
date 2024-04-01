@@ -1,19 +1,18 @@
-
-
-
-const openModalButton = document.querySelector('#open-modal');
 const modal = document.querySelector('#myModal');
-const modalBackground = document.querySelector('#modalBg')
+const openModalButton = document.querySelector('#open-modal');
+const overlay = document.querySelector('#overlay');
 
- openModalButton.addEventListener('click', function() {
-        modal.style.display = "block";
-        modalBackground.style.display = "block"
-        modalBackground.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-    });
+function openModal() {
+    modal.classList.add('active');
+    overlay.classList.add('active');
+    document.body.classList.add('modal-open'); 
+}
 
-window.addEventListener('click', function(event) {
-        if (event.target === modalBackground) {
-            modal.style.display = "none";
-            modalBackground.style.display = "none"
-        }
-    });
+function closeModal() {
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.classList.remove('modal-open'); 
+} 
+
+openModalButton.addEventListener('click', openModal);
+overlay.addEventListener('click', closeModal);

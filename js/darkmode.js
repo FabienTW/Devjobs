@@ -3,6 +3,7 @@ const main = document.querySelector('main');
 const iconFilter = document.querySelector('.icon-filter');
 const searchInput = document.querySelector('.form-input');
 const titleSearch = document.querySelector('.title-search');
+
 toggleSwitch.addEventListener('change', switchTheme, false);
 
 function switchTheme(e) {
@@ -11,6 +12,7 @@ function switchTheme(e) {
 }
 
 function applyTheme(theme) {
+    console.log('appel?')
     const jobCards = document.querySelectorAll('.jobs-card');     
     const jobTitles = document.querySelectorAll('.jobs-title');
 
@@ -28,8 +30,6 @@ function applyTheme(theme) {
         jobTitles.forEach(title => {
             title.classList.add('jobs-title-darkmode');
         });
-
-
     } else {
         main.classList.remove('main-darkmode');
         iconFilter.classList.remove('filter-svg');
@@ -49,12 +49,12 @@ function applyTheme(theme) {
     localStorage.setItem('theme', theme); 
 }
 
-// On retiens le choix de l'utilisateur dans le localstorage
+// On retient le choix de l'utilisateur dans le localStorage
 
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme) {
     applyTheme(currentTheme);
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-    }
+    toggleSwitch.checked = (currentTheme === 'dark');
+} else {
+    applyTheme('light');
 }

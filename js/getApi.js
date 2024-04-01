@@ -1,5 +1,3 @@
-
-
 // Fonction pour récupérer les données de l'API
 let offset = 12; 
 let totalJobs = 0
@@ -18,10 +16,10 @@ async function fetchJobsData(offset) {
 
 async function loadMoreJobs() {
     try {
-       
         const responseData = await fetchJobsData(offset);
         const jobsData = responseData.jobs;
-        
+        totalJobs = responseData.total
+        console.log(totalJobs)
         if (jobsData && Array.isArray(jobsData)) {
             const container = document.querySelector('#job-cards-container');
 
@@ -32,7 +30,12 @@ async function loadMoreJobs() {
 
             offset += 12; 
 
-            if ( offset>= totalJobs) {}
+            if ( offset > totalJobs) {
+                
+
+                document.querySelector('.btn-loadmore').textContent = "Il n'y a plus d'offres"
+
+            }
         } else {
             console.error('Aucun emploi n\'a été trouvé.');
         }
@@ -75,6 +78,4 @@ displayJobCardsFromAPI();
 
 
 // On lance la fonction loadMorejobs au clic du bouton loadmore
-
-
 document.querySelector('.btn-loadmore').addEventListener('click', loadMoreJobs);

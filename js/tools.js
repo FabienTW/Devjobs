@@ -5,7 +5,6 @@ function showLoadingIndicator() {
     document.getElementById('loading-indicator').style.display = 'block';
 }
 
-
 // Fonction pour masquer l'indicateur de chargement
 function hideLoadingIndicator() {
     document.getElementById('loading-indicator').style.display = 'none';

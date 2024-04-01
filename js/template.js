@@ -1,14 +1,8 @@
 
-
-
-
-
-// Fonction pour créer une carte d'emploi à partir des données
 function createJobCard(jobData) {
     const template = document.querySelector('#job-card-template');
     const clone = template.content.cloneNode(true);
 
-    // Remplir les données de la carte d'emploi
     clone.querySelector('.jobs-title').textContent = jobData.position;
     clone.querySelector('.jobs-company').textContent = jobData.company;
     clone.querySelector('.jobs-location').textContent = jobData.location;
@@ -18,5 +12,21 @@ function createJobCard(jobData) {
     console.log("https://ecf-dwwm.cefim-formation.org" + jobData.logo)
     clone.querySelector('.jobs-logo').style.backgroundColor = jobData.logoBackground;
 
-    return document.importNode(clone, true); // Utiliser document.importNode pour cloner le contenu du template
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        const jobCard = clone.querySelector('.jobs-card');
+        const jobTitle = clone.querySelector('.jobs-title');
+        jobCard.classList.add('jobs-card-darkmode');
+        jobTitle.classList.add('jobs-title-darkmode');
+    }
+
+    return document.importNode(clone, true); 
+}
+
+function addJobCardsToDOM(jobDataArray) {
+    const jobCardsContainer = document.getElementById('job-cards-container');
+    jobDataArray.forEach(jobData => {
+        const jobCard = createJobCard(jobData);
+        jobCardsContainer.appendChild(jobCard);
+    });
 }

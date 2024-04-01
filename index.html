@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,8 +8,8 @@
     <link rel="shortcut icon" href="./img/favicon-32x32.png" />
   </head>
   <body>
-
-
+    <div class="overlay" id="overlay"></div>
+ 
     <header>
 
 
@@ -26,6 +26,39 @@
 
     <main>
       <div class="container">
+
+        <div class="modal modal-toggle" id="myModal">
+          <div class="location-content">
+            <img
+              src="./img/icon-location.svg"
+              alt="location"
+              width="30px"
+              height="30px"
+              class="location"
+            />
+            <label for="location-search"></label>
+            <input
+              type="search"
+              id="location-search"
+              placeholder="Filter by location..."
+              class="input-location"
+            />
+          </div>
+
+          <div class="fts-input">
+            <div class="cntr">
+              <input type="checkbox" id="cbx" class="hidden-xs-up" />
+              <label for="cbx" class="cbx"></label>
+            </div>
+            <p class="fts-content">Full Time Only</p>
+          </div>
+          <button type="search" class="btn-search" id="modalclose-btn">
+            Search
+          </button>
+        </div>
+
+
+
         <form action="GET" class="research-form">
           <div class="form-input">
             <label for="title-search"></label>
@@ -63,40 +96,12 @@
               />
             </button>
 
-            <div class="modal-background" id="modalBg">
-              <div class="modal modal-toggle" id="myModal">
-                <div class="location-content">
-                  <img
-                    src="./img/icon-location.svg"
-                    alt="location"
-                    width="30px"
-                    height="30px"
-                    class="location"
-                  />
-                  <label for="location-search"></label>
-                  <input
-                    type="search"
-                    id="location-search"
-                    placeholder="Filter by location..."
-                    class="input-location"
-                  />
-                </div>
-
-                <div class="fts-input">
-                  <div class="cntr">
-                    <input type="checkbox" id="cbx" class="hidden-xs-up" />
-                    <label for="cbx" class="cbx"></label>
-                  </div>
-                  <p class="fts-content">Full Time Only</p>
-                </div>
-                <button type="search" class="btn-search search-button">
-                  Search
-                </button>
-              </div>
-            </div>
+          
+             
           </div>
         </form>
       </div>
+      <div class="overlay" id="overlay"></div>
 
       <section class="jobs">
 
@@ -143,7 +148,11 @@
     <script src="./js/getApi.js"></script>
     <script src="./js/template.js"></script>
     <script src="./js/darkmode.js"></script>
+    <script src="./js/modale.js"></script>
+    <script src="./js/research.js"></script>
+
+
 
     
   </body>
-</html>
+</html> 
