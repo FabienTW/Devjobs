@@ -101,3 +101,11 @@ header {
 .checkbox:checked + .toggle-content + .checkbox-content {
     display: block;
 }
+
+
+@include mq ('md') {
+    header {
+background-position: 0 0;
+background-color: $violet
+    }
+}

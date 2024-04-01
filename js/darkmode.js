@@ -3,6 +3,13 @@ const main = document.querySelector('main');
 const iconFilter = document.querySelector('.icon-filter');
 const searchInput = document.querySelector('.form-input');
 const titleSearch = document.querySelector('.title-search');
+const modalBg = document.querySelector('.modal');
+const inputLocationBg = document.querySelector('.input-location');
+const inputLocationP = document.querySelector('.fts-content');
+
+
+
+
 
 toggleSwitch.addEventListener('change', switchTheme, false);
 
@@ -19,9 +26,13 @@ function applyTheme(theme) {
     if (theme === 'dark') {
         console.log('ok')
         main.classList.add('main-darkmode');
+        modalBg.classList.add('input-darkmode');
+        inputLocationBg.classList.add('input-darkmode')
+        inputLocationP.classList.add('white')
         iconFilter.classList.add('filter-svg');
         searchInput.classList.add('input-darkmode');
         titleSearch.classList.add('input-darkmode');
+
 
         jobCards.forEach(card => {
             card.classList.add('jobs-card-darkmode');

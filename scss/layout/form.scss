@@ -24,6 +24,16 @@
     border-radius: .375rem;
     align-items: center;
 }
+
+.form-input:hover {
+    cursor: pointer;
+}
+.title-search:hover {
+    cursor: pointer;
+}
+.checkbox:hover {
+    cursor: pointer;
+}
 .btn-search {
     min-width: 3rem;
     margin: 1rem;
@@ -42,3 +52,4 @@
    .img-filter {
     cursor: pointer
    }
+

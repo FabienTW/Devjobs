@@ -248,6 +248,12 @@ header div {
   display: block;
 }
 
+@media screen and (min-width: 48em) {
+  header {
+    background-position: 0 0;
+    background-color: #5964E0;
+  }
+}
 body {
   font-family: "Kumbh Sans";
 }
@@ -302,6 +308,18 @@ main {
   background-color: white;
   border-radius: 0.375rem;
   align-items: center;
+}
+
+.form-input:hover {
+  cursor: pointer;
+}
+
+.title-search:hover {
+  cursor: pointer;
+}
+
+.checkbox:hover {
+  cursor: pointer;
 }
 
 .btn-search {
@@ -437,19 +455,22 @@ main {
   height: 1.5rem;
 }
 
-.search-button {
+.btn-search-modal {
+  border-radius: 6px;
   border: none;
   font-size: 1rem;
   font-weight: bold;
   color: #FFFFFF;
-  width: 87%;
+  width: calc(100% - 48px);
   padding: 1rem;
+  margin: 1.5rem;
+  background-color: #5964E0;
 }
 
 .fts-input {
   display: flex;
   align-items: center;
-  margin: 1.5rem;
+  margin: 1.5rem 1.5rem 0 1.5rem;
 }
 
 .fts-content {
@@ -551,6 +572,26 @@ main {
   display: none;
 }
 
+@media screen and (min-width: 48em) {
+  #job-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  .jobs-card {
+    width: auto;
+  }
+}
+@media screen and (min-width: 75em) {
+  #job-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  .jobs-card {
+    width: auto;
+  }
+}
 .main-darkmode {
   background-color: #121721;
 }

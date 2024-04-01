@@ -77,3 +77,27 @@
     display: none;
 }
 
+
+@include mq ('md') {
+    #job-cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    .jobs-card {
+        width: auto; 
+    }
+}
+
+@include mq ('xl') {
+    #job-cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+
+    .jobs-card {
+        width: auto; 
+    }
+}
