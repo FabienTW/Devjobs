@@ -44,8 +44,60 @@ header {
     font-weight: bold;
 }
 
+.toggle-menu .checkbox {
+    position: relative;
+    appearance: none;
+    height: 1.5rem;
+    width: 3rem;
+    background-color: $white;
+    border-radius: 5rem;
+    transition: background-color .2s;
+    box-shadow: 0 0 15px #0000001e;
+}
+
+ .checkbox::after {    
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    transform: translate(-50% -50%);
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: $violet;
+    transition: left .2s;
+
+}
 
 
+.checkbox:checked::after {
+    left: 50%;
+}
 
+.checkbox:hover::after {
+    background-color: $light-violet;
+}
 
-
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+.toggle-menu {
+    display: flex;
+    align-items: center;
+}
+.toggle-menu img {
+    margin-right: 5px;
+}
+.toggle-content {
+    display: none;
+}
+.checkbox:checked + .toggle-content {
+    display: block;
+}
+.checkbox-content {
+    display: none;
+}
+.checkbox:checked + .toggle-content + .checkbox-content {
+    display: block;
+}

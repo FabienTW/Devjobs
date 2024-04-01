@@ -1,33 +1,51 @@
 
 
 // Fonction pour récupérer les données de l'API
-async function fetchJobsData() {
-    console.log('Début de la récupération des données...');
+let offset = 12; 
+let totalJobs = 0
 
-    // Afficher l'indicateur de chargement
-    showLoadingIndicator();
+async function fetchJobsData(offset) {
+    const apiUrl = `https://ecf-dwwm.cefim-formation.org/api/jobs?offset=${offset}`;
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+        throw new Error('Erreur lors de la récupération des données');
+    }
+    console.log(response.json)
+    return await response.json();
+    
+    
+}
 
+async function loadMoreJobs() {
     try {
-        const response = await fetch('https://ecf-dwwm.cefim-formation.org/api/jobs');
-        if (!response.ok) {
-            throw new Error('Erreur lors de la récupération des données');
+       
+        const responseData = await fetchJobsData(offset);
+        const jobsData = responseData.jobs;
+        
+        if (jobsData && Array.isArray(jobsData)) {
+            const container = document.querySelector('#job-cards-container');
+
+            jobsData.forEach(job => {
+                const card = createJobCard(job);
+                container.appendChild(card);
+            });
+
+            offset += 12; 
+
+            if ( offset>= totalJobs) {}
+        } else {
+            console.error('Aucun emploi n\'a été trouvé.');
         }
-        const data = await response.json();
-
-        console.log('Données récupérées avec succès :', data);
-
-        return data;
     } catch (error) {
-        console.error('Erreur lors de la récupération des données : ', error);
-        throw error; // Propager l'erreur pour que le code appelant puisse la gérer
-    } finally {
-        // Masquer l'indicateur de chargement une fois les données chargées ou en cas d'erreur
-        console.log('Masquage de l\'indicateur de chargement...');
-        hideLoadingIndicator();
+        console.error('Erreur lors du chargement des emplois : ', error);
     }
 }
 
+
 // Fonction pour afficher les cartes d'emploi avec les données de l'API
+
+
+
 async function displayJobCardsFromAPI() {
     console.log('Affichage des cartes d\'emploi à partir de l\'API...');
 
@@ -55,3 +73,8 @@ async function displayJobCardsFromAPI() {
 displayJobCardsFromAPI();
 
 
+
+// On lance la fonction loadMorejobs au clic du bouton loadmore
+
+
+document.querySelector('.btn-loadmore').addEventListener('click', loadMoreJobs);
