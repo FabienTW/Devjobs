@@ -6,7 +6,8 @@ const titleSearch = document.querySelector('.title-search');
 const modalBg = document.querySelector('.modal');
 const inputLocationBg = document.querySelector('.input-location');
 const inputLocationP = document.querySelector('.fts-content');
-
+const detailsHero = document.querySelector('.jobsinfos-content');
+const descriptionContainer = document.querySelector('.description-container')
 
 
 
@@ -32,7 +33,7 @@ function applyTheme(theme) {
         iconFilter.classList.add('filter-svg');
         searchInput.classList.add('input-darkmode');
         titleSearch.classList.add('input-darkmode');
-
+        descriptionContainer.classList.add('input-darkmode');
 
         jobCards.forEach(card => {
             card.classList.add('jobs-card-darkmode');

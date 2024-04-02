@@ -284,6 +284,10 @@ main {
   padding-block: 1rem;
 }
 
+.lien-detail {
+  text-decoration: none;
+}
+
 body {
   background-color: #F4F6F8;
 }
@@ -654,6 +658,11 @@ body {
   margin: 2.875rem;
 }
 
+.btn-company:hover {
+  cursor: pointer;
+  color: #939BF4;
+}
+
 .jobsinfos-company {
   margin-inline-start: 2.5rem;
   display: flex;
@@ -700,10 +709,14 @@ body {
   align-items: center;
 }
 
+.btn-apply:hover {
+  cursor: pointer;
+}
+
 .jobs-description-location {
   color: #5964E0;
+  font-weight: 700;
   font-size: 0.875rem;
-  margin-block-start: 0.5rem;
   margin-block-end: 2.5rem;
 }
 
@@ -714,18 +727,50 @@ body {
 
 .list-requirement {
   color: #6E8098;
+  margin-block: 0.5rem;
+}
+
+.ulist {
+  list-style-type: disc;
+}
+
+.ulist .list-requirement {
+  margin-inline-start: 20px;
+}
+
+.olist .list-requirement {
+  margin-left: 50px;
+  list-style-type: decimal;
+  padding-inline-start: 1.5625rem;
 }
 
 .list-requirement::marker {
+  size: 1.5rem;
+  font-weight: 700;
   color: #5964E0;
 }
 
-.list-do {
+h3 {
+  margin-block-start: 2.5rem;
+  margin-block-end: 1.75rem;
+}
+
+.role-textcontent {
   color: #6E8098;
+  margin-inline-end: 1.5rem;
 }
 
-.list-do::marker {
-  color: #5964E0;
+.input-darkmode {
+  background-color: #19202D;
+}
+
+.btn-companydark {
+  background-color: #303642;
+  color: #FFFFFF;
+}
+
+.white {
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=style.css.map */

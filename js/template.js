@@ -4,6 +4,7 @@ function createJobCard(jobData) {
     const clone = template.content.cloneNode(true);
 
     clone.querySelector('.jobs-title').textContent = jobData.position;
+    clone.querySelector('.jobs-title').id = jobData.id
     clone.querySelector('.jobs-company').textContent = jobData.company;
     clone.querySelector('.jobs-location').textContent = jobData.location;
     clone.querySelector('.jobs-posted-time').textContent = timeSince(jobData.postedAt);
@@ -18,6 +19,7 @@ function createJobCard(jobData) {
         const jobTitle = clone.querySelector('.jobs-title');
         jobCard.classList.add('jobs-card-darkmode');
         jobTitle.classList.add('jobs-title-darkmode');
+        
     }
 
     return document.importNode(clone, true); 
@@ -30,3 +32,6 @@ function addJobCardsToDOM(jobDataArray) {
         jobCardsContainer.appendChild(jobCard);
     });
 }
+
+
+

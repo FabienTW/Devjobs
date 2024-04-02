@@ -31,6 +31,11 @@
     margin: 2.875rem;
 }
 
+.btn-company:hover {
+    cursor: pointer;
+    color: $light-violet;
+}
+
 
 .jobsinfos-company {
 margin-inline-start: 2.5rem;
@@ -78,10 +83,14 @@ justify-content: center;
     align-items: center;
 }
 
+.btn-apply:hover {
+    cursor: pointer;
+}
+
 .jobs-description-location {
     color: $violet;
+    font-weight: 700;
     font-size: .875rem;
-    margin-block-start: .5rem;
     margin-block-end: 2.5rem;
 }
 
@@ -92,17 +101,53 @@ justify-content: center;
 
 .list-requirement {
     color: $dark-grey;
+    margin-block: .5rem;
+}
+
+.ulist {
+    list-style-type: disc;
+}
+
+.ulist .list-requirement {
+    margin-inline-start: 20px; 
+}
+
+.olist .list-requirement {
+    margin-left: 50px;
+    list-style-type: decimal;
+    padding-inline-start: 1.5625rem;
+
 }
 
 
 .list-requirement::marker{
+    size: 1.5rem;
+    font-weight: 700;
     color: $violet;
 }
 
-.list-do {
+
+h3 {
+    margin-block-start: 2.5rem;
+    margin-block-end: 1.75rem;
+}
+
+
+.role-textcontent {
     color: $dark-grey;
+    margin-inline-end: 1.5rem;
 }
 
-.list-do::marker{
-    color: $violet;
+
+.input-darkmode {
+    background-color: $very-dark-blue;
+}
+
+.btn-companydark {
+background-color: #303642;
+color: $white;
+}
+
+.white {
+    color: $white;
 }
