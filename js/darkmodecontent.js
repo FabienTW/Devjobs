@@ -19,15 +19,20 @@ const companyName = document.querySelector('.name')
 const position = document.querySelector('.jobs-description-title')
 const h3 = document.querySelector('.h3requirement')
 const h3do = document.querySelector('.h3do')
+const footerWrapper = document.querySelector('.footer-container')
+const wrapper = document.querySelector('.footer-wrapper')
+
     console.log('appel?')
    
 
     if (theme === 'dark') {
         
-        main.classList.add('main-darkmode');
-        document.documentElement.setAttribute('data-theme', 'dark');
+    main.classList.add('main-darkmode');
+    document.documentElement.setAttribute('data-theme', 'dark');
     detailsHero.classList.add('input-darkmode');
     descriptionContainer.classList.add('input-darkmode');
+    footerWrapper.classList.add('input-darkmode');
+    wrapper.classList.add('input-darkmode');
     btnCompany.classList.add('btn-companydark');
     companyName.classList.add('white');
     position.classList.add('white');
@@ -36,8 +41,8 @@ const h3do = document.querySelector('.h3do')
         
 
     } else {
-        main.classList.remove('main-darkmode');
-        document.documentElement.setAttribute('data-theme', 'light');
+    main.classList.remove('main-darkmode');
+    document.documentElement.setAttribute('data-theme', 'light');
     detailsHero.classList.remove('input-darkmode');
     descriptionContainer.classList.remove('input-darkmode');
     btnCompany.classList.remove('btn-companydark');
@@ -45,6 +50,8 @@ const h3do = document.querySelector('.h3do')
     position.classList.remove('white');
     h3.classList.remove('white')
     h3do.classList.remove('white')
+    footerWrapper.classList.remove('input-darkmode');
+    wrapper.classList.remove('input-darkmode');
     }
 
     document.documentElement.setAttribute('data-theme', theme);

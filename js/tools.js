@@ -1,16 +1,13 @@
 
 
-// Fonction pour afficher l'indicateur de chargement
 function showLoadingIndicator() {
     document.getElementById('loading-indicator').style.display = 'block';
 }
 
-// Fonction pour masquer l'indicateur de chargement
 function hideLoadingIndicator() {
     document.getElementById('loading-indicator').style.display = 'none';
 }
 
-// Fonction conversion timestamp en duree :
 function timeSince(timestamp) {
     const seconds = Math.floor((new Date() - timestamp) / 1000);
     let interval = Math.floor(seconds / 3600);
@@ -29,4 +26,6 @@ function timeSince(timestamp) {
     }
     return interval +  'h ago';
 }
+
+
 

@@ -30,6 +30,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         document.querySelector('.role-textcontent').textContent = responseData.role.content
         document.querySelector('.jobs-description-posted-time').textContent = timeSince(responseData.postedAt)
         document.querySelector('.jobs-description-location').textContent = responseData.location;
+        document.querySelector('.footer-position').textContent = responseData.position
+        document.querySelector('.footer-name').textContent = responseData.company
         console.log (responseData.location)
 
         const requirementsList = document.querySelector('.ulist');

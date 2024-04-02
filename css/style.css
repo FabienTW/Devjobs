@@ -148,15 +148,16 @@ address {
 }
 header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   background-image: url(../../img/background-pattern-header.svg);
+  background-size: cover;
   background-repeat: no-repeat;
   height: 8.5rem;
   background-position: left -45px top 0;
+  background-color: #5964E0;
 }
 header .logo {
-  margin-bottom: 4.5rem;
-  margin-top: 2rem;
   margin-left: 1.5rem;
   align-items: center;
   color: #FFFFFF;
@@ -174,10 +175,11 @@ header .toggle-menu .toggle {
   background-color: white;
   border-radius: 12px;
 }
-header div {
-  display: flex;
+
+.linklogo {
   align-items: center;
-  gap: 1rem;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
@@ -249,11 +251,10 @@ header div {
 
 @media screen and (min-width: 48em) {
   header {
-    background-position: 0 0;
-    background-size: cover;
+    background-position: 0;
+    background-color: #FFFFFF;
   }
 }
-/* Copyright Damien Buisson */
 body {
   font-family: "Kumbh Sans";
 }
@@ -264,6 +265,7 @@ body {
 
 main {
   background-color: #F4F6F8;
+  padding-block-end: 5rem;
 }
 
 .btn-content {
@@ -288,8 +290,8 @@ main {
   text-decoration: none;
 }
 
-body {
-  background-color: #F4F6F8;
+.search-bar-desktop-tablet {
+  display: none;
 }
 
 .research-form {
@@ -348,6 +350,67 @@ body {
   cursor: pointer;
 }
 
+@media screen and (min-width: 75em) {
+  .search-bar-mobile {
+    display: none;
+  }
+  .search-bar-desktop-tablet {
+    display: block;
+    transform: translateY(-50%);
+  }
+  .search-bar-desktop-tablet-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-gap: 10px;
+    background-color: #FFFFFF;
+    border-radius: 0.375rem;
+  }
+  .border {
+    border-right: 1px solid;
+    border-color: rgba(244, 246, 248, 0.5);
+  }
+  .fts-input {
+    border-left: 1px solid;
+    border-color: rgba(244, 246, 248, 0.5);
+  }
+}
+.search-bar-desktop-tablet-container .input-wrapper {
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar-desktop-tablet-container .input-wrapper input {
+  margin: auto;
+  padding-inline-end: 3rem;
+}
+
+.form-wrap {
+  padding-inline: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-bar-desktop-tablet-container .fts-input {
+  margin: 0;
+  padding: 1rem;
+}
+
+.search-bar-desktop-tablet-container .btn-search-desktop {
+  margin: 1rem;
+  max-width: 7.6875rem;
+}
+
+.search-bar-desktop-tablet .location {
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+
+#title-search-desktop::placeholder {
+  content: "Filter by title, companies, expertise…";
+}
+
 .cbx {
   position: relative;
   top: 1px;
@@ -355,11 +418,11 @@ body {
   height: 27px;
   border: 1px solid #c8ccd4;
   border-radius: 3px;
-  vertical-align: middle;
   transition: background 0.1s ease;
   cursor: pointer;
   display: block;
   background-color: #979797;
+  opacity: 40%;
 }
 
 .cbx:after {
@@ -390,6 +453,17 @@ body {
 }
 
 #cbx:checked ~ .cbx:after {
+  opacity: 1;
+  transform: rotate(45deg) scale(1);
+}
+
+#cbx-desktop:checked ~ .cbx {
+  border-color: transparent;
+  background: #6871f1;
+  animation: jelly 0.6s ease;
+}
+
+#cbx-desktop:checked ~ .cbx:after {
   opacity: 1;
   transform: rotate(45deg) scale(1);
 }
@@ -610,6 +684,7 @@ body {
 
 .input-darkmode {
   background-color: #19202D;
+  color: #FFFFFF;
 }
 
 .filter-svg {
@@ -646,6 +721,20 @@ body {
   align-items: center;
 }
 
+header .linklogo {
+  display: flex;
+  margin-bottom: 4.5rem;
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.linklogo {
+  display: flex;
+  align-items: center;
+}
+
 .btn-company {
   border: none;
   color: #5964E0;
@@ -660,7 +749,7 @@ body {
 
 .btn-company:hover {
   cursor: pointer;
-  color: #939BF4;
+  background-color: rgba(89, 100, 224, 0.5);
 }
 
 .jobsinfos-company {
@@ -698,6 +787,7 @@ body {
 }
 
 .btn-apply {
+  display: flex;
   max-height: 3rem;
   font-weight: bold;
   border: none;
@@ -711,6 +801,11 @@ body {
 
 .btn-apply:hover {
   cursor: pointer;
+  background-color: #939BF4;
+}
+
+.link-apply {
+  text-decoration: none;
 }
 
 .jobs-description-location {
@@ -739,7 +834,7 @@ body {
 }
 
 .olist .list-requirement {
-  margin-left: 50px;
+  margin-left: 1rem;
   list-style-type: decimal;
   padding-inline-start: 1.5625rem;
 }
@@ -769,8 +864,61 @@ h3 {
   color: #FFFFFF;
 }
 
+@media (prefers-color-scheme: light) {
+  .btn-companydark {
+    background-color: #F4F6F8;
+    color: #FFFFFF;
+  }
+}
 .white {
   color: #FFFFFF;
+}
+
+.footer-container {
+  background-color: #FFFFFF;
+}
+
+.footer-wrapper {
+  padding-block: 1.4375rem;
+  padding-inline: clamp(1.5rem, -1.603rem + 13.239vw, 10.313rem);
+  margin: auto;
+  max-width: 75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-infos {
+  display: grid;
+  align-items: center;
+}
+
+.footer-container .footer-infos h3 {
+  position: relative;
+  margin-block-end: 0.4375rem;
+  top: -0.4rem;
+}
+
+.footer-container .footer-link {
+  display: flex;
+  align-items: center;
+}
+
+.footer-container .footer-link .btn-apply {
+  background-color: #5964e0;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.footer-container .footer-link .btn-apply:hover {
+  background-color: #939BF4;
+}
+
+.footer-name {
+  color: #6E8098;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,99 +1,79 @@
-<DOCTYPE html>
-    <html lang="en" data-theme="light">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Description</title>
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="shortcut icon" href="./img/favicon-32x32.png" />
-      </head>
-      <body>
-     
-        <header>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Description</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./img/favicon-32x32.png">
+</head>
+<body>
 
-          <div class="logo">
-            <h1> devjobs </h1>
-          </div>
-          <div class="toggle-menu">
-            <img src="./img/icon-sun.svg" alt="#" width="20px" height="18.6px" />
-            <input class="checkbox" type="checkbox">
-            <input class="checkbox-content" type="checkbox" >
-            <img src="./img/icon-moon.svg" alt="#" width="12px" height="12px" />
-          </div>
-        </header>
+<header>
+    <a class="linklogo" href="./index.html">
+        <h1>devjobs</h1>
+    </a>
+    <div class="toggle-menu">
+        <img src="./img/icon-sun.svg" alt="#" width="20px" height="18.6px">
+        <input class="checkbox" type="checkbox" id="togglecheck" aria-label="Toggle Dark Mode">
+        <input class="checkbox-content" type="checkbox" id="toglechecked">
+        <img src="./img/icon-moon.svg" alt="#" width="12px" height="12px">
+    </div>
+</header>
 
-        <main>
-          
-        <div class="container">
-
-
-          <div class="jobs-description-card">
+<main>
+    <div class="container">
+        <div class="jobs-description-card">
             <img class="jobs-description-logo" src="" alt="Logo de l'entreprise" width="140px" height="140px">
             <div class="jobsinfos-content">
-              <div class="jobsinfos-company">
-                <p class="name">Scoot</p>
-                <p class="link">scoot.com</p>
-              </div>
-              <button class="btn-company">Company Site</button>
-
+                <div class="jobsinfos-company">
+                    <p class="name">Scoot</p>
+                    <p class="link">scoot.com</p>
+                </div>
+                <button class="btn-company">Company Site</button>
             </div>
-          </div>
+        </div>
 
-
-
-          <div class="description-container">
-              <div class="jobs-description-infos">
+        <div class="description-container">
+            <div class="jobs-description-infos">
                 <p class="jobs-description-posted-time"></p>
                 <span class="jobs-median">&#183;</span>
                 <p class="jobs-description-type"></p>
-              </div>
-              <div class="titleinfos-content">
-                <h3 class="jobs-description-title">
-                </h3>
-                <a class= "link-apply">
-                  <button class="btn-apply">Apply Now</button>
-                </a>               
-              </div>
-              <div class="jobs-description-location"></div> 
-              <p class="jobs-description-requirements"> 
-              </p>
-
-              <h3 class="h3requirement">Requirements</h3>
-
-
-              <p class="jobs-requiremts">
-                <ul class="ulist">
-                </ul>
-
-
+            </div>
+            <div class="titleinfos-content">
+                <h3 class="jobs-description-title"></h3>
+                <a class="link-apply" href="#">
+                    <button class="btn-apply">Apply Now</button>
+                </a>
+            </div>
+            <div class="jobs-description-location"></div>
+            <p class="jobs-description-requirements"></p>
+            <h3 class="h3requirement">Requirements</h3>
+            <p class="jobs-requiremts">
+                <ul class="ulist"></ul>
                 <h3 class="h3do">What you will do</h3>
-
-
                 <p class="role-textcontent"></p>
-
-
-                <ol class="olist">
-
-                </ol>
-
-
-              
-            </div>  
+                <ol class="olist"></ol>
+            </p>
         </div>
-  
-          </div>
+    </div>
+</main>
 
+<footer class="footer-container">
+    <div class="footer-wrapper">
+        <div class="footer-infos">
+            <h3 class="footer-position"></h3>
+            <p class="footer-name"></p>
+        </div>
+        <div class="footer-link">
+            <a href="#"></a>
+            <button class="btn-apply">Apply now</button>
+        </div>
+    </div>
+</footer>
 
-
-        </main>
-
-
-          <script src="./js/tools.js"></script>         
-          <script src="./js/content.js"></script>
-          <script src="./js/darkmodecontent.js"></script>
-           
-        
-          </body>
-          </html>
-          
-
+<script src="./js/tools.js"></script>
+<script src="./js/content.js"></script>
+<script src="./js/darkmodecontent.js"></script>
+</body>
+</html>

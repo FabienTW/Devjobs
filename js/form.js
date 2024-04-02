@@ -16,3 +16,12 @@ function closeModal() {
 
 openModalButton.addEventListener('click', openModal);
 overlay.addEventListener('click', closeModal);
+
+const titleSearchDesktop = document.querySelector('#title-search-desktop');
+const placeholderText = window.innerWidth <= 768 ? "Filter by title..." :   "Filter by title, companies, expertise…";
+window.addEventListener('resize', function() {
+  
+    titleSearchDesktop.setAttribute('placeholder', placeholderText);
+});
+
+window.dispatchEvent(new Event('resize'));

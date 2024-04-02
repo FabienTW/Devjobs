@@ -9,8 +9,8 @@ document.querySelector('#title-search').addEventListener('input', async (e) => {
     }
 });
 
-document.querySelector('#submit-form').addEventListener('click', async () => {
-    const text = document.querySelector('#title-search').value;
+document.querySelector('#title-search-desktop').addEventListener('input', async (e) => {
+    const text = e.target.value;
     try {
         const searchData = await ResearchJobs(text);
         displayJobs(searchData);
@@ -18,6 +18,24 @@ document.querySelector('#submit-form').addEventListener('click', async () => {
         console.error('Erreur lors de la recherche des emplois : ', error);
     }
 });
+
+
+// La partie ci dessous ne fonctionne pas pourtant l'uRL est correct et prends bien le text en parametre, je ne trouve pas l'erreur // 
+
+
+document.querySelector('#submit-form').addEventListener('click', async () => {
+    const text = document.querySelector('#title-search').value;
+    console.log (text)
+    try {
+        const searchData = await ResearchJobs(text);
+        displayJobs(searchData);
+    } catch (error) {
+        console.error('Erreur lors de la recherche des emplois : ', error);
+    }
+});
+
+// La partie ci dessus ne fonctionne pas pourtant l'uRL est correct et prends bien le text en parametre, je ne trouve pas l'erreur
+
 document.querySelector('#modalclose-btn').addEventListener('click', async () => {
     const location = document.querySelector('#location-search').value;
     const fulltime = document.querySelector('#cbx').checked ? 1 : 0;
@@ -31,7 +49,19 @@ document.querySelector('#modalclose-btn').addEventListener('click', async () => 
     }
 });
 
+document.querySelector('#submit-form-desktop').addEventListener('click', async (e) => {
+    e.preventDefault();
+    const location = document.querySelector('#location-search-desktop').value;
+    const fulltime = document.querySelector('#cbx-desktop').checked ? 1 : 0;
 
+    try {
+        const searchData = await ResearchJobs('',location, fulltime);
+        console.log(location,fulltime)
+        displayJobs(searchData);
+    } catch (error) {
+        console.error('Erreur lors de la recherche des emplois : ', error);
+    }
+});
 
 async function ResearchJobs(text = '', location = '', fulltime = 0, offset = 0, limit = 12) {
     let apiUrl = `https://ecf-dwwm.cefim-formation.org/api/jobs/search?offset=${offset}&limit=${limit}`;

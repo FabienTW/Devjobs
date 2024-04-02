@@ -1,163 +1,133 @@
- <DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job's Board</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="./img/favicon-32x32.png" />
-  </head>
-  <body>
-    <div class="overlay" id="overlay"></div>
- 
-    <header>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./img/favicon-32x32.png">
+</head>
+<body>
+<div class="overlay" id="overlay"></div>
 
+<header>
+    <div class="logo">
+        <a class="linklogo" href="./index.html">
+            <h1>devjobs</h1>
+        </a>
+    </div>
+    <div class="toggle-menu">
+        <img src="./img/icon-sun.svg" alt="#" width="20" height="19">
+        <input class="checkbox" id="togglecheck" type="checkbox" aria-label="Toggle Dark Mode">
+        <input class="checkbox-content" id="togglechecked" type="checkbox">
+        <img src="./img/icon-moon.svg" alt="#" width="12" height="12">
+    </div>
+</header>
 
-      <div class="logo">
-        <h1> devjobs </h1>
-      </div>
-      <div class="toggle-menu">
-        <img src="./img/icon-sun.svg" alt="#" width="20px" height="18.6px" />
-        <input class="checkbox" type="checkbox">
-        <input class="checkbox-content" type="checkbox" >
-        <img src="./img/icon-moon.svg" alt="#" width="12px" height="12px" />
-      </div>
-    </header>
-
-    <main>
-      <div class="container">
-
+<main>
+    <div class="container">
         <div class="modal modal-toggle" id="myModal">
-          <div class="filter-container">
-          <div class="location-content">
-            <img
-              src="./img/icon-location.svg"
-              alt="location"
-              width="30px"
-              height="30px"
-              class="location"
-            />
-            <label for="location-search"></label>
-            <input
-              type="search"
-              id="location-search"
-              placeholder="Filter by location..."
-              class="input-location"
-            />
-          </div>
+            <div class="filter-container">
+                <div class="location-content">
+                    <img src="./img/icon-location.svg" alt="location" width="30" height="30" class="location">
+                    <label for="location-search" aria-label="Filter by Location"></label>
+                    <input type="search" id="location-search" placeholder="Filter by location..." class="input-location" aria-labelledby="location-search">
+                </div>
 
-          <div class="fts-input">
-            <div class="cntr">
-              <input type="checkbox" id="cbx" class="hidden-xs-up" />
-              <label for="cbx" class="cbx"></label>
+                <div class="fts-input">
+                    <div class="cntr">
+                        <input type="checkbox" id="cbx" class="hidden-xs-up" aria-label="Filter Full Time Jobs">
+                        <label for="cbx" class="cbx" aria-hidden="true"></label>
+                    </div>
+                    <label for="cbx" class="fts-content">Full Time Only</label>
+                </div>
             </div>
-            <p class="fts-content">Full Time Only</p>
-          </div>
-          </div>
-          <button type="search" class="btn-search-modal" id="modalclose-btn">
-            Search
-          </button>
+            <button type="submit" class="btn-search-modal" id="modalclose-btn">
+                Search
+            </button>
         </div>
 
-
-
-        <form action="GET" class="research-form">
-          <div class="form-input">
-            <label for="title-search"></label>
-            <input
-              type="search"
-              id="title-search"
-              placeholder="Filter by title..."
-              class="title-search"
-            />
-            <img
-              src="./img/icon-search.svg"
-              alt="#"
-              width="25px"
-              height="25px"
-              class="search-hidden"
-            />
-            <div class="img-filter" id="open-modal">
-              <img
-              src="./img/icon-filter.svg"
-              alt="#"
-              width="25px"
-              height="25px"
-              class="icon-filter open-modal"
-              
-            />
+        <form action="GET" class="search-bar-mobile">
+            <div class="form-input">
+                <label for="title-search" aria-label="Filter by Title"></label>
+                <input type="search" id="title-search" placeholder="Filter by title..." class="title-search" aria-labelledby="title-search">
+                <img src="./img/icon-search.svg" alt="#" width="25" height="25" class="search-hidden" aria-hidden="true">
+                <div class="img-filter" id="open-modal">
+                    <img src="./img/icon-filter.svg" alt="#" width="25" height="25" class="icon-filter open-modal" aria-haspopup="true">
+                </div>
+                <button type="submit" id="submit-form" class="btn-search" aria-label="Submit Search">
+                    <img src="./img/icon-search.svg" alt="#" width="20" height="20">
+                </button>
             </div>
-            
-
-            <button type="submit" id="submit-form" class="btn-search">
-              <img
-                src="./img/icon-search.svg"
-                alt="#"
-                width="20px"
-                height="20px"
-              />
-            </button>
-
-          
-             
-          </div>
         </form>
-      </div>
-      <div class="overlay" id="overlay"></div>
 
-      <section class="jobs">
+        <form action="GET" class="search-bar-desktop-tablet">
+            <div class="search-bar-desktop-tablet-container">
+                <div class="input-wrapper border">
+                    <img src="./img/icon-searchdesktop.svg" alt="location" width="30" height="30" class="location" id="bgimg">
+                    <label for="title-search-desktop" aria-label="Filter by Title"></label>
+                    <input type="search" id="title-search-desktop" class="input-location" aria-labelledby="title-search-desktop">
+                </div>
 
+                <div class="input-wrapper">
+                    <img src="./img/icon-location.svg" alt="location" width="30" height="30" class="location" id="dgimg">
+                    <label for="location-search-desktop" aria-label="Filter by Location"></label>
+                    <input type="search" id="location-search-desktop" placeholder="Filter by location..." class="input-location" aria-labelledby="location-search-desktop">
+                </div>
 
+                <div class="form-wrap">
+                    <div class="fts-input">
+                        <div class="cntr">
+                            <input type="checkbox" id="cbx-desktop" class="hidden-xs-up" aria-label="Filter Full Time Jobs">
+                            <label for="cbx-desktop" class="cbx" aria-hidden="true"></label>
+                        </div>
+                        <label for="cbx-desktop" class="fts-content">Full Time</label>
+                    </div>
+
+                    <button type="button" id="submit-form-desktop" class="btn-search-modal btn-search-desktop" aria-label="Submit Search">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <section class="jobs">
         <div id="loading-indicator">
-          Chargement en cours...
-      </div>
-        
+            Chargement en cours...
+        </div>
 
-      <template id="job-card-template">
-        <div class="jobs-card">
-          <img class="jobs-logo" src="" alt="Logo de l'entreprise" width="50px" height="50px">
-          <div class="jobs-infos">
-            <p class="jobs-posted-time"></p>
-            <span class="jobs-median">&#183;</span>
-            <p class="jobs-type"></p>
-          </div>
-          <a class="lien-detail" href="./content.html">
-            <h3 class="jobs-title"></h3>
-          </a>
-          
-          <p class="jobs-company"></p>
-          <p class="jobs-location"></p> 
-        </div>  
-      </template>
-      
-
+        <template id="job-card-template">
+            <div class="jobs-card">
+                <img class="jobs-logo" src="" alt="Logo de l'entreprise" width="50px" height="50px">
+                <div class="jobs-infos">
+                    <p class="jobs-posted-time"></p>
+                    <span class="jobs-median">&#183;</span>
+                    <p class="jobs-type"></p>
+                </div>
+                <a class="lien-detail" href="./content.html">
+                    <h3 class="jobs-title"></h3>
+                </a>
+                <p class="jobs-company"></p>
+                <p class="jobs-location"></p>
+            </div>
+        </template>
 
         <div class="container" id="job-cards-container">
         </div>
-        </div>
 
         <div class="btn-content">
-          <button class="btn-loadmore">Load More</button>
+            <button class="btn-loadmore">Load More</button>
         </div>
+    </section>
+</main>
 
-      
-
-
-
-      </section>
-
-    </main>
-
-    <script src="./js/tools.js"></script>
-    <script src="./js/form.js"></script>
-    <script src="./js/getApi.js"></script>
-    <script src="./js/template.js"></script>
-    <script src="./js/darkmode.js"></script>
-    <script src="./js/research.js"></script>
-    <script src="./js/details.js"></script>
-
-
-
-    
-  </body>
-</html> 
+<script src="./js/tools.js"></script>
+<script src="./js/form.js"></script>
+<script src="./js/getApi.js"></script>
+<script src="./js/template.js"></script>
+<script src="./js/darkmode.js"></script>
+<script src="./js/research.js"></script>
+<script src="./js/details.js"></script>
+</body>
+</html>

@@ -7,9 +7,11 @@ const modalBg = document.querySelector('.modal');
 const inputLocationBg = document.querySelector('.input-location');
 const inputLocationP = document.querySelector('.fts-content');
 const detailsHero = document.querySelector('.jobsinfos-content');
-const descriptionContainer = document.querySelector('.description-container')
-
-
+const inputFormDesktop = document.querySelector('.search-bar-desktop-tablet-container')
+const searchinput= document.querySelector('#location-search-desktop')
+const titleInput= document.querySelector('#title-search-desktop')
+const imglocation = document.querySelector('#bgimg');
+const searchlocation = document.querySelector('#dgimg');
 
 
 toggleSwitch.addEventListener('change', switchTheme, false);
@@ -28,12 +30,18 @@ function applyTheme(theme) {
         console.log('ok')
         main.classList.add('main-darkmode');
         modalBg.classList.add('input-darkmode');
+        inputFormDesktop.classList.add('input-darkmode');
         inputLocationBg.classList.add('input-darkmode')
         inputLocationP.classList.add('white')
         iconFilter.classList.add('filter-svg');
         searchInput.classList.add('input-darkmode');
         titleSearch.classList.add('input-darkmode');
-        descriptionContainer.classList.add('input-darkmode');
+        searchinput.classList.add('input-darkmode');
+        titleInput.classList.add('input-darkmode');
+        imglocation.style.backgroundColor = '#19202D'; 
+        searchlocation.style.backgroundColor = '#19202D'; 
+
+       
 
         jobCards.forEach(card => {
             card.classList.add('jobs-card-darkmode');
@@ -47,6 +55,12 @@ function applyTheme(theme) {
         iconFilter.classList.remove('filter-svg');
         searchInput.classList.remove('input-darkmode');
         titleSearch.classList.remove('input-darkmode');
+        searchinput.classList.remove('input-darkmode');
+        titleInput.classList.remove('input-darkmode');
+        inputFormDesktop.classList.remove('input-darkmode');
+        imglocation.style.backgroundColor = 'white'; 
+        searchlocation.style.backgroundColor = 'white';
+      
 
         jobCards.forEach(card => {
             card.classList.remove('jobs-card-darkmode');
